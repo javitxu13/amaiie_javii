@@ -25,19 +25,19 @@ services:
       - ./:/usr/src/app
       - exclude:/usr/src/app/node_modules/
     environment:
-      - VIRTUAL_HOST=api.amaiie.lafuentedanel.com
+      - VIRTUAL_HOST=api.amaiie.javiergonzalez.site
       - VIRTUAL_PORT=5000
-      - LETSENCRYPT_HOST=api.amaiie.lafuentedanel.com
-      - LETSENCRYPT_EMAIL=admin@lafuentedanel.com
+      - LETSENCRYPT_HOST=api.amaiie.javiergonzalez.site
+      - LETSENCRYPT_EMAIL=admin@javiergonzalez.site
   react:
     image: nginx:latest
     expose:
       - "80"
     environment:
-      - VIRTUAL_HOST=amaiie.lafuentedanel.com
+      - VIRTUAL_HOST=amaiie.javiergonzalez.site
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=amaiie.lafuentedanel.com
-      - LETSENCRYPT_EMAIL=admin@lafuentedanel.com
+      - LETSENCRYPT_HOST=amaiie.javiergonzalez.site
+      - LETSENCRYPT_EMAIL=admin@javiergonzalez.site
     volumes:
       - /home/ubuntu/amaiie:/usr/share/nginx/html:ro
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf

@@ -36,7 +36,7 @@ export default function SignupScreen() {
       return;
     }
     try {
-      const { data } = await axios.post("https://api.amaiie.lafuentedanel.com/api/users/signup", {
+      const { data } = await axios.post("https://api.amaiie.javiergonzalez.site/api/users/signup", {
         username,
         email,
         isArtist,

@@ -41,5 +41,5 @@ app.use((error, req, res, next) => {
 //Inicializamos el servidor en el puerto 5000
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  console.log(`server at https://api.amaiie.lafuentedanel.com`);
+  console.log(`server at https://api.amaiie.javiergonzalez.site`);
 });

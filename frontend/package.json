@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "https://api.amaiie.lafuentedanel.com",
+  "proxy": "https://api.amaiie.javiergonzalez.site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

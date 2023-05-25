@@ -48,7 +48,7 @@ export default function UserEditScreen() {
     const fetchData = async () => {
       try {
         dispatch({ type: "FETCH_REQUEST" });
-        const { data } = await axios.get(`https://api.amaiie.lafuentedanel.com/api/users/${userId}`, {
+        const { data } = await axios.get(`https://api.amaiie.javiergonzalez.site/api/users/${userId}`, {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
         setUsername(data.username);
@@ -70,7 +70,7 @@ export default function UserEditScreen() {
     try {
       dispatch({ type: "UPDATE_REQUEST" });
       await axios.put(
-        `https://api.amaiie.lafuentedanel.com/api/users/${userId}`,
+        `https://api.amaiie.javiergonzalez.site/api/users/${userId}`,
         { _id: userId, username, email, isAdmin, isArtist },
         {
           headers: { Authorization: `Bearer ${userInfo.token}` },

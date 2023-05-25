@@ -63,7 +63,7 @@ function App() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await Axios.get(`https://api.amaiie.lafuentedanel.com/api/products/categories`);
+        const { data } = await Axios.get(`https://api.amaiie.javiergonzalez.site/api/products/categories`);
         setCategories(data);
       } catch (err) {
         toast.error(getError(err)); //notificación de error

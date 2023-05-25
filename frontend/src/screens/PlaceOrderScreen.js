@@ -58,7 +58,7 @@ function PlaceOrderScreen() {
     try {
       dispatch({ type: "CREATE_REQUEST" });
       const { data } = await Axios.post(
-        "https://api.amaiie.lafuentedanel.com/api/orders",
+        "https://api.amaiie.javiergonzalez.site/api/orders",
         {
           orderItems: cart.cartItems,
           shippingAddress: cart.shippingAddress,
@@ -131,7 +131,7 @@ function PlaceOrderScreen() {
                     <Row className='align-items-center'>
                       <Col md={6}>
                         <img
-                          src={`https://api.amaiie.lafuentedanel.com/fotoproducto/${item.image}`}
+                          src={`https://api.amaiie.javiergonzalez.site/fotoproducto/${item.image}`}
                           alt={item.nameproduct}
                           className='img-fluid rounded img-thumbnail'
                         ></img>

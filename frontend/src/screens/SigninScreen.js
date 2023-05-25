@@ -30,7 +30,7 @@ export default function SigninScreen() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await Axios.post("https://api.amaiie.lafuentedanel.com/api/users/signin", {
+      const { data } = await Axios.post("https://api.amaiie.javiergonzalez.site/api/users/signin", {
         username,
         password,
       });

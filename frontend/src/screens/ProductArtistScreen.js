@@ -57,7 +57,7 @@ export default function ProductArtistScreen() {
       dispatch({ type: "FETCH_REQUEST" });
       try {
         const products = await axios.get(
-          `https://api.amaiie.lafuentedanel.com/api/users/${userInfo.username}/products`
+          `https://api.amaiie.javiergonzalez.site/api/users/${userInfo.username}/products`
         );
         const productsData = products.data;
         console.log(productsData);
@@ -77,7 +77,7 @@ export default function ProductArtistScreen() {
   const deleteHandler = async (product) => {
     if (window.confirm("Are you sure to delete?")) {
       try {
-        await axios.delete(`https://api.amaiie.lafuentedanel.com/api/products/${product._id}`, {
+        await axios.delete(`https://api.amaiie.javiergonzalez.site/api/products/${product._id}`, {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
         toast.success("product deleted successfully");
@@ -124,7 +124,7 @@ export default function ProductArtistScreen() {
                 <td>
                   {" "}
                   <img
-                    src={`https://api.amaiie.lafuentedanel.com/fotoproducto/${product.image}`}
+                    src={`https://api.amaiie.javiergonzalez.site/fotoproducto/${product.image}`}
                     alt={product.nameproduct}
                     className='small'
                   ></img>

@@ -58,7 +58,7 @@ export default function SearchScreen() {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `https://api.amaiie.lafuentedanel.com/api/products/search?page=${page}&query=${query}&category=${category}&price=${price}&order=${order}`
+          `https://api.amaiie.javiergonzalez.site/api/products/search?page=${page}&query=${query}&category=${category}&price=${price}&order=${order}`
         );
         dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (err) {
@@ -75,7 +75,7 @@ export default function SearchScreen() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get(`https://api.amaiie.lafuentedanel.com/api/products/categories`);
+        const { data } = await axios.get(`https://api.amaiie.javiergonzalez.site/api/products/categories`);
         setCategories(data);
       } catch (err) {
         toast.error(getError(err));

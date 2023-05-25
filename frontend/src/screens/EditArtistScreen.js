@@ -52,7 +52,7 @@ export default function EditArtistScreen() {
       formData.append("description", description);
       formData.append("password", password);
 
-      const { data } = await axios.put("https://api.amaiie.lafuentedanel.com/api/users/editprofile", formData, {
+      const { data } = await axios.put("https://api.amaiie.javiergonzalez.site/api/users/editprofile", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${userInfo.token}`,

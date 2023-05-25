@@ -103,7 +103,7 @@ export default function OrderScreen() {
       try {
         dispatch({ type: "PAY_REQUEST" });
         const { data } = await axios.put(
-          `https://api.amaiie.lafuentedanel.com/api/orders/${order._id}/pay`,
+          `https://api.amaiie.javiergonzalez.site/api/orders/${order._id}/pay`,
           details,
           {
             headers: { authorization: `Bearer ${userInfo.token}` },
@@ -126,7 +126,7 @@ export default function OrderScreen() {
     const fetchOrder = async () => {
       try {
         dispatch({ type: "FETCH_REQUEST" });
-        const { data } = await axios.get(`https://api.amaiie.lafuentedanel.com/api/orders/${orderId}`, {
+        const { data } = await axios.get(`https://api.amaiie.javiergonzalez.site/api/orders/${orderId}`, {
           headers: { authorization: `Bearer ${userInfo.token}` },
         });
         dispatch({ type: "FETCH_SUCCESS", payload: data });
@@ -153,7 +153,7 @@ export default function OrderScreen() {
       }
     } else {
       const loadPaypalScript = async () => {
-        const { data: clientId } = await axios.get("https://api.amaiie.lafuentedanel.com/api/keys/paypal", {
+        const { data: clientId } = await axios.get("https://api.amaiie.javiergonzalez.site/api/keys/paypal", {
           headers: { authorization: `Bearer ${userInfo.token}` },
         });
         paypalDispatch({
@@ -181,7 +181,7 @@ export default function OrderScreen() {
     try {
       dispatch({ type: "DELIVER_REQUEST" });
       const { data } = await axios.put(
-        `https://api.amaiie.lafuentedanel.com/api/orders/${order._id}/deliver`,
+        `https://api.amaiie.javiergonzalez.site/api/orders/${order._id}/deliver`,
         {},
         {
           headers: { authorization: `Bearer ${userInfo.token}` },
@@ -251,7 +251,7 @@ export default function OrderScreen() {
                     <Row className='align-items-center'>
                       <Col md={6}>
                         <img
-                          src={`https://api.amaiie.lafuentedanel.com/fotoproducto/${item.image}`}
+                          src={`https://api.amaiie.javiergonzalez.site/fotoproducto/${item.image}`}
                           alt={item.name}
                           className='img-fluid rounded img-thumbnail'
                         ></img>{" "}
